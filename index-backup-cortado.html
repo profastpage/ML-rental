@@ -1,0 +1,2725 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="ML RENTAL - Alquiler de grúas, maquinaria pesada y transporte de carga. Servicio en todo el Perú para minería, construcción e industria.">
+  <meta name="keywords" content="alquiler de grúas, maquinaria pesada, transporte de carga, minería, construcción, Perú">
+  <meta name="author" content="ML RENTAL">
+  <meta name="theme-color" content="#FFD700">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <title>ML RENTAL | Alquiler de Grúas y Maquinaria Pesada en Perú</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ============================
+       VARIABLES
+    ============================ */
+    :root {
+      --primary: #FFD700;
+      --primary-dark: #E6C200;
+      --primary-light: #FFE44D;
+      --secondary: #1a1a1a;
+      --dark: #0d0d0d;
+      --gray-800: #1f1f1f;
+      --gray-700: #2d2d2d;
+      --gray-600: #404040;
+      --gray-500: #595959;
+      --gray-400: #8c8c8c;
+      --gray-300: #bfbfbf;
+      --gray-200: #e6e6e6;
+      --gray-100: #f5f5f5;
+      --white: #ffffff;
+      --success: #25D366;
+      --success-dark: #128C7E;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 50px;
+    }
+
+    /* ============================
+       RESET & BASE
+    ============================ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--secondary);
+      background-color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 0 24px;
+      }
+    }
+
+    .section {
+      padding: 50px 0;
+    }
+
+    @media (min-width: 768px) {
+      .section {
+        padding: 70px 0;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .section {
+        padding: 90px 0;
+      }
+    }
+
+    .section-dark {
+      background: var(--dark);
+      color: var(--white);
+    }
+
+    .section-gray {
+      background: var(--gray-100);
+    }
+
+    /* ============================
+       BOTONES
+    ============================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 24px;
+      font-family: 'Barlow', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    @media (min-width: 480px) {
+      .btn {
+        width: auto;
+        padding: 15px 28px;
+        font-size: 14px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .btn {
+        padding: 16px 32px;
+        font-size: 15px;
+      }
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: var(--dark);
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--dark);
+    }
+
+    .btn-whatsapp {
+      background: var(--success);
+      color: var(--white);
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--success-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    }
+
+    /* ============================
+       HEADER / NAV - MOBILE FIRST
+    ============================ */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(13, 13, 13, 0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--primary);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      padding: 0 16px;
+    }
+
+    @media (min-width: 768px) {
+      .nav-container {
+        height: 80px;
+        padding: 0 24px;
+      }
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Barlow', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    @media (min-width: 768px) {
+      .logo {
+        font-size: 24px;
+        gap: 12px;
+      }
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: var(--dark);
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 768px) {
+      .logo-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+      }
+    }
+
+    .nav-menu {
+      display: none;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    @media (min-width: 992px) {
+      .nav-menu {
+        display: flex;
+        gap: 32px;
+      }
+    }
+
+    .nav-menu a {
+      color: var(--gray-300);
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: color 0.3s ease;
+    }
+
+    @media (min-width: 992px) {
+      .nav-menu a {
+        font-size: 14px;
+      }
+    }
+
+    .nav-menu a:hover {
+      color: var(--primary);
+    }
+
+    .nav-cta {
+      display: none;
+    }
+
+    @media (min-width: 992px) {
+      .nav-cta {
+        display: flex;
+      }
+    }
+
+    .mobile-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+      z-index: 1001;
+    }
+
+    @media (min-width: 992px) {
+      .mobile-toggle {
+        display: none;
+      }
+    }
+
+    .mobile-toggle span {
+      width: 24px;
+      height: 3px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .mobile-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(13, 13, 13, 0.98);
+      padding: 80px 24px 24px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      z-index: 999;
+      overflow-y: auto;
+    }
+
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+
+    .mobile-menu ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 16px 20px;
+      color: var(--gray-300);
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-radius: var(--radius-md);
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .mobile-menu a:hover {
+      background: rgba(255, 215, 0, 0.15);
+      color: var(--primary);
+    }
+
+    /* ============================
+       HERO SECTION - MOBILE FIRST
+    ============================ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 64px;
+      background: linear-gradient(135deg, rgba(13,13,13,0.92) 0%, rgba(26,26,26,0.88) 100%),
+                  url('https://picsum.photos/seed/construction1/1920/1080') center/cover no-repeat;
+      background-attachment: scroll;
+      overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        padding-top: 80px;
+        background-attachment: fixed;
+      }
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(to top, var(--white), transparent);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 215, 0, 0.15);
+      border: 1px solid var(--primary);
+      padding: 6px 14px;
+      border-radius: 50px;
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      max-width: 100%;
+    }
+
+    @media (min-width: 480px) {
+      .hero-badge {
+        font-size: 12px;
+        padding: 8px 16px;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .hero-badge {
+        font-size: 13px;
+        padding: 10px 20px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(26px, 5.5vw, 42px);
+      color: var(--white);
+      margin-bottom: 14px;
+      line-height: 1.15;
+      font-weight: 800;
+    }
+
+    @media (min-width: 480px) {
+      .hero h1 {
+        font-size: clamp(32px, 6vw, 48px);
+        margin-bottom: 18px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: clamp(44px, 5vw, 64px);
+        margin-bottom: 24px;
+      }
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero h1 span::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 215, 0, 0.35);
+      z-index: -1;
+      border-radius: 2px;
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 span::after {
+        height: 10px;
+        bottom: 4px;
+      }
+    }
+
+    .hero p {
+      font-size: 14px;
+      color: var(--gray-300);
+      margin-bottom: 24px;
+      line-height: 1.6;
+      max-width: 100%;
+    }
+
+    @media (min-width: 480px) {
+      .hero p {
+        font-size: 16px;
+        margin-bottom: 28px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .hero p {
+        font-size: 18px;
+        margin-bottom: 36px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 480px) {
+      .hero-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+        margin-bottom: 40px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .hero-buttons {
+        gap: 16px;
+        margin-bottom: 50px;
+      }
+    }
+
+    .hero-stats {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-lg);
+      max-width: 100%;
+    }
+
+    @media (min-width: 480px) {
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 24px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .hero-stats {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        padding: 32px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 8px 4px;
+    }
+
+    .stat-number {
+      font-family: 'Barlow', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+    }
+
+    @media (min-width: 480px) {
+      .stat-number {
+        font-size: 36px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .stat-number {
+        font-size: 44px;
+      }
+    }
+
+    .stat-label {
+      font-size: 10px;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    @media (min-width: 480px) {
+      .stat-label {
+        font-size: 11px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .stat-label {
+        font-size: 13px;
+      }
+    }
+
+    /* ============================
+       SECTION HEADER
+    ============================ */
+    .section-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    @media (min-width: 768px) {
+      .section-header {
+        margin-bottom: 50px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .section-header {
+        margin-bottom: 60px;
+      }
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: var(--dark);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: 480px) {
+      .section-tag {
+        font-size: 11px;
+        padding: 7px 16px;
+        margin-bottom: 16px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .section-tag {
+        font-size: 12px;
+        padding: 8px 18px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .section-title {
+      font-size: clamp(24px, 5vw, 36px);
+      color: var(--secondary);
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: 480px) {
+      .section-title {
+        font-size: clamp(30px, 5vw, 40px);
+        margin-bottom: 16px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: clamp(38px, 4vw, 48px);
+        margin-bottom: 20px;
+      }
+    }
+
+    .section-title span {
+      color: var(--primary);
+    }
+
+    .section-title-white {
+      color: var(--white);
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: var(--gray-500);
+      line-height: 1.7;
+    }
+
+    @media (min-width: 480px) {
+      .section-subtitle {
+        font-size: 15px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .section-subtitle {
+        font-size: 17px;
+      }
+    }
+
+    /* ============================
+       SERVICIOS - MOBILE FIRST
+    ============================ */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 480px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: all 0.4s ease;
+      border: 1px solid var(--gray-200);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+
+    .service-image {
+      position: relative;
+      height: 180px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    @media (min-width: 480px) {
+      .service-image {
+        height: 200px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .service-image {
+        height: 220px;
+      }
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover .service-image img {
+      transform: scale(1.1);
+    }
+
+    .service-number {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: var(--dark);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Barlow', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    @media (min-width: 480px) {
+      .service-number {
+        top: 12px;
+        left: 12px;
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .service-number {
+        top: 16px;
+        left: 16px;
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+      }
+    }
+
+    .service-content {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (min-width: 480px) {
+      .service-content {
+        padding: 24px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .service-content {
+        padding: 28px;
+      }
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(255, 215, 0, 0.15);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 480px) {
+      .service-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .service-title {
+      font-size: 17px;
+      color: var(--secondary);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    @media (min-width: 480px) {
+      .service-title {
+        font-size: 19px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .service-title {
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+    }
+
+    .service-description {
+      font-size: 13px;
+      color: var(--gray-500);
+      line-height: 1.6;
+      margin-bottom: 14px;
+      flex: 1;
+    }
+
+    @media (min-width: 480px) {
+      .service-description {
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .service-description {
+        font-size: 15px;
+      }
+    }
+
+    .service-features {
+      list-style: none;
+      margin-bottom: 18px;
+    }
+
+    .service-features li {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12px;
+      color: var(--gray-600);
+      padding: 4px 0;
+    }
+
+    @media (min-width: 480px) {
+      .service-features li {
+        font-size: 13px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .service-features li {
+        font-size: 14px;
+      }
+    }
+
+    .service-features li::before {
+      content: '✓';
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .service-card .btn {
+      width: 100%;
+    }
+
+    /* ============================
+       FLOTA - MOBILE FIRST
+    ============================ */
+    .fleet-section {
+      background: var(--gray-100);
+    }
+
+    .fleet-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    @media (min-width: 480px) {
+      .fleet-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .fleet-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px;
+      }
+    }
+
+    .fleet-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 16px 12px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      text-align: center;
+    }
+
+    @media (min-width: 480px) {
+      .fleet-card {
+        padding: 18px 14px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .fleet-card {
+        padding: 24px;
+      }
+    }
+
+    .fleet-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+    }
+
+    .fleet-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(255, 215, 0, 0.15);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin: 0 auto 12px;
+    }
+
+    @media (min-width: 480px) {
+      .fleet-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+        margin-bottom: 14px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .fleet-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 32px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .fleet-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--secondary);
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      line-height: 1.3;
+    }
+
+    @media (min-width: 480px) {
+      .fleet-name {
+        font-size: 13px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .fleet-name {
+        font-size: 14px;
+      }
+    }
+
+    .fleet-specs {
+      font-size: 11px;
+      color: var(--gray-500);
+      line-height: 1.4;
+    }
+
+    @media (min-width: 480px) {
+      .fleet-specs {
+        font-size: 12px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .fleet-specs {
+        font-size: 13px;
+      }
+    }
+
+    .fleet-specs strong {
+      color: var(--primary-dark);
+    }
+
+    /* ============================
+       SECTORES - MOBILE FIRST
+    ============================ */
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    @media (min-width: 480px) {
+      .sectors-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .sectors-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+    }
+
+    .sector-card {
+      position: relative;
+      aspect-ratio: 1;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      cursor: pointer;
+      min-height: 140px;
+    }
+
+    @media (min-width: 480px) {
+      .sector-card {
+        min-height: 160px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .sector-card {
+        aspect-ratio: auto;
+        min-height: 260px;
+      }
+    }
+
+    .sector-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .sector-card:hover .sector-image {
+      transform: scale(1.1);
+    }
+
+    .sector-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 16px;
+    }
+
+    @media (min-width: 480px) {
+      .sector-overlay {
+        padding: 18px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .sector-overlay {
+        padding: 24px;
+      }
+    }
+
+    .sector-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    @media (min-width: 480px) {
+      .sector-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+        margin-bottom: 12px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .sector-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .sector-title {
+      font-size: 14px;
+      color: var(--white);
+      margin-bottom: 5px;
+      line-height: 1.3;
+    }
+
+    @media (min-width: 480px) {
+      .sector-title {
+        font-size: 16px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .sector-title {
+        font-size: 18px;
+      }
+    }
+
+    .sector-description {
+      font-size: 11px;
+      color: var(--gray-300);
+      line-height: 1.4;
+      display: none;
+    }
+
+    @media (min-width: 480px) {
+      .sector-description {
+        display: block;
+        font-size: 12px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .sector-description {
+        font-size: 13px;
+      }
+    }
+
+    /* ============================
+       POR QUÉ ELEGIRNOS
+    ============================ */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 480px) {
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .why-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 28px;
+      }
+    }
+
+    .why-item {
+      text-align: center;
+      padding: 28px 18px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+      transition: all 0.3s ease;
+    }
+
+    @media (min-width: 480px) {
+      .why-item {
+        padding: 32px 20px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .why-item {
+        padding: 36px 24px;
+      }
+    }
+
+    .why-item:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: var(--primary);
+      transform: translateY(-4px);
+    }
+
+    .why-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: var(--dark);
+      margin: 0 auto 18px;
+    }
+
+    @media (min-width: 480px) {
+      .why-icon {
+        width: 68px;
+        height: 68px;
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .why-icon {
+        width: 76px;
+        height: 76px;
+        font-size: 34px;
+        margin-bottom: 22px;
+      }
+    }
+
+    .why-title {
+      font-size: 16px;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    @media (min-width: 480px) {
+      .why-title {
+        font-size: 17px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .why-title {
+        font-size: 18px;
+      }
+    }
+
+    .why-description {
+      font-size: 13px;
+      color: var(--gray-400);
+      line-height: 1.6;
+    }
+
+    @media (min-width: 480px) {
+      .why-description {
+        font-size: 14px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .why-description {
+        font-size: 15px;
+      }
+    }
+
+    /* ============================
+       PROYECTOS
+    ============================ */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 480px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .projects-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 28px;
+      }
+    }
+
+    .project-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      cursor: pointer;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover .project-image {
+      transform: scale(1.1);
+    }
+
+    .project-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 18px;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    @media (min-width: 480px) {
+      .project-overlay {
+        padding: 20px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .project-overlay {
+        opacity: 0;
+        padding: 24px;
+      }
+
+      .project-card:hover .project-overlay {
+        opacity: 1;
+      }
+    }
+
+    .project-category {
+      font-size: 10px;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+
+    @media (min-width: 480px) {
+      .project-category {
+        font-size: 11px;
+      }
+    }
+
+    .project-title {
+      font-size: 15px;
+      color: var(--white);
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+
+    @media (min-width: 480px) {
+      .project-title {
+        font-size: 16px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .project-title {
+        font-size: 17px;
+      }
+    }
+
+    .project-card .btn {
+      padding: 10px 18px;
+      font-size: 11px;
+      align-self: flex-start;
+    }
+
+    @media (min-width: 480px) {
+      .project-card .btn {
+        padding: 11px 20px;
+        font-size: 12px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .project-card .btn {
+        padding: 12px 22px;
+        font-size: 13px;
+      }
+    }
+
+    /* ============================
+       CLIENTES
+    ============================ */
+    .clients-section {
+      background: var(--white);
+      padding: 50px 0;
+    }
+
+    @media (min-width: 768px) {
+      .clients-section {
+        padding: 70px 0;
+      }
+    }
+
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      align-items: center;
+      justify-items: center;
+    }
+
+    @media (min-width: 480px) {
+      .clients-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .clients-grid {
+        grid-template-columns: repeat(8, 1fr);
+        gap: 32px;
+      }
+    }
+
+    .client-logo {
+      max-width: 100%;
+      width: 80px;
+      height: 45px;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.5;
+      transition: all 0.3s ease;
+    }
+
+    @media (min-width: 480px) {
+      .client-logo {
+        width: 90px;
+        height: 50px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .client-logo {
+        width: 100px;
+        height: 55px;
+      }
+    }
+
+    .client-logo:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+    /* ============================
+       CTA BANNER
+    ============================ */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      padding: 50px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+      .cta-banner {
+        padding: 70px 0;
+      }
+    }
+
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 250px;
+      height: 250px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+    }
+
+    @media (min-width: 768px) {
+      .cta-banner::before {
+        width: 400px;
+        height: 400px;
+      }
+    }
+
+    .cta-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .cta-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+
+    .cta-text h2 {
+      font-size: clamp(22px, 5vw, 30px);
+      color: var(--dark);
+      margin-bottom: 7px;
+    }
+
+    @media (min-width: 768px) {
+      .cta-text h2 {
+        font-size: 34px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .cta-text p {
+      font-size: 14px;
+      color: var(--gray-700);
+    }
+
+    @media (min-width: 768px) {
+      .cta-text p {
+        font-size: 16px;
+      }
+    }
+
+    /* ============================
+       FOOTER
+    ============================ */
+    .footer {
+      background: var(--dark);
+      color: var(--gray-400);
+      padding: 50px 0 0;
+    }
+
+    @media (min-width: 768px) {
+      .footer {
+        padding: 70px 0 0;
+      }
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 35px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 480px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        gap: 48px;
+      }
+    }
+
+    .footer-brand .logo {
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      font-size: 13px;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    @media (min-width: 480px) {
+      .footer-brand p {
+        font-size: 14px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .footer-brand p {
+        font-size: 15px;
+      }
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-social a {
+      width: 38px;
+      height: 38px;
+      background: var(--gray-800);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      color: var(--white);
+      transition: all 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      background: var(--primary);
+      color: var(--dark);
+      transform: translateY(-2px);
+    }
+
+    .footer-title {
+      font-size: 13px;
+      color: var(--white);
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @media (min-width: 480px) {
+      .footer-title {
+        font-size: 14px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .footer-title {
+        font-size: 15px;
+      }
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 11px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--gray-400);
+      transition: color 0.3s ease;
+    }
+
+    @media (min-width: 480px) {
+      .footer-links a {
+        font-size: 14px;
+      }
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .footer-contact li {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      margin-bottom: 14px;
+      font-size: 13px;
+    }
+
+    @media (min-width: 480px) {
+      .footer-contact li {
+        font-size: 14px;
+      }
+    }
+
+    .footer-contact li span {
+      font-size: 17px;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--gray-800);
+      padding: 20px 0;
+    }
+
+    @media (min-width: 768px) {
+      .footer-bottom {
+        padding: 26px 0;
+      }
+    }
+
+    .footer-bottom-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+
+    @media (min-width: 480px) {
+      .footer-bottom-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+
+    .footer-bottom p {
+      font-size: 12px;
+    }
+
+    @media (min-width: 480px) {
+      .footer-bottom p {
+        font-size: 13px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .footer-bottom p {
+        font-size: 14px;
+      }
+    }
+
+    .fastpagepro-credits {
+      text-align: center;
+      padding: 18px;
+      background: #000;
+      border-top: 1px solid var(--gray-800);
+    }
+
+    .fastpagepro-credits p {
+      font-size: 12px;
+      color: var(--gray-500);
+    }
+
+    @media (min-width: 480px) {
+      .fastpagepro-credits p {
+        font-size: 13px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .fastpagepro-credits p {
+        font-size: 14px;
+      }
+    }
+
+    .fastpagepro-credits a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .fastpagepro-credits a:hover {
+      text-decoration: underline;
+    }
+
+    /* ============================
+       WHATSAPP FLOTANTE - MOBILE FIRST
+    ============================ */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      z-index: 999;
+      animation: pulse 2s infinite;
+    }
+
+    @media (min-width: 768px) {
+      .whatsapp-float {
+        bottom: 24px;
+        right: 24px;
+      }
+    }
+
+    .whatsapp-float a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      background: var(--success);
+      color: var(--white);
+      border-radius: 50%;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+      transition: all 0.3s ease;
+      border: none;
+      outline: none;
+      padding: 0;
+    }
+
+    @media (min-width: 480px) {
+      .whatsapp-float a {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    /* Desktop: botón con texto */
+    @media (min-width: 768px) {
+      .whatsapp-float a {
+        width: auto;
+        height: 52px;
+        padding: 0 22px;
+        gap: 10px;
+        border-radius: 50px;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: 'Barlow', sans-serif;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .whatsapp-float a {
+        height: 56px;
+        padding: 0 26px;
+        font-size: 16px;
+      }
+    }
+
+    .whatsapp-float .whatsapp-icon {
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 480px) {
+      .whatsapp-float .whatsapp-icon {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .whatsapp-float .whatsapp-icon {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    .whatsapp-float .whatsapp-text {
+      display: none;
+      white-space: nowrap;
+    }
+
+    @media (min-width: 768px) {
+      .whatsapp-float .whatsapp-text {
+        display: inline;
+      }
+    }
+
+    .whatsapp-float a:hover {
+      background: var(--success-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
+    }
+
+    .whatsapp-float a:active {
+      transform: translateY(-1px);
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+      }
+      50% {
+        box-shadow: 0 4px 26px rgba(37, 211, 102, 0.6);
+      }
+    }
+
+    /* ============================
+       UTILIDADES
+    ============================ */
+    .text-center {
+      text-align: center;
+    }
+
+    .mt-1 { margin-top: 8px; }
+    .mt-2 { margin-top: 16px; }
+    .mt-3 { margin-top: 24px; }
+    .mb-1 { margin-bottom: 8px; }
+    .mb-2 { margin-bottom: 16px; }
+    .mb-3 { margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">⚙</div>
+        <span>ML RENTAL</span>
+      </a>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#flota">Flota</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-cta">
+        <a href="https://api.whatsapp.com/send?phone=51933667414" class="btn btn-primary" target="_blank" rel="nofollow">
+          <span>📱</span> Cotizar Ahora
+        </a>
+      </div>
+      
+      <button class="mobile-toggle" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#flota">Flota</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="https://api.whatsapp.com/send?phone=51933667414" target="_blank" rel="nofollow">📱 Cotizar por WhatsApp</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>🏆</span> Líderes en Alquiler de Maquinaria Pesada
+        </div>
+        <h1>
+          Alquiler de <span>Grúas</span> y Maquinaria Pesada para Grandes Proyectos
+        </h1>
+        <p>
+          Más de 7 años brindando soluciones integrales de transporte de carga pesada, 
+          alquiler de grúas y mantenimiento de equipos para minería, construcción e industria en todo el Perú.
+        </p>
+        <div class="hero-buttons">
+          <a href="https://api.whatsapp.com/send?phone=51933667414&text=Hola%20ML%20RENTAL%2C%20me%20interesa%20cotizar%20un%20servicio.%20Por%20favor%20brindarme%20m%C3%A1s%20informaci%C3%B3n." class="btn btn-primary" target="_blank" rel="nofollow">
+            <span>💬</span> Hablar por WhatsApp
+          </a>
+          <a href="#servicios" class="btn btn-outline">
+            Ver Servicios
+          </a>
+        </div>
+        
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">+7</div>
+            <div class="stat-label">Años de Experiencia</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">+60</div>
+            <div class="stat-label">Equipos Disponibles</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">+300</div>
+            <div class="stat-label">Proyectos Exitosos</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Soporte Técnico</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nuestros Servicios</span>
+        <h2 class="section-title">Soluciones Integrales para tu <span>Industria</span></h2>
+        <p class="section-subtitle">
+          Contamos con una amplia flota de equipos modernos y personal calificado 
+          para brindar servicios de alquiler, transporte y mantenimiento en todo el territorio nacional.
+        </p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Servicio 1 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://picsum.photos/seed/crane1/800/600" alt="Alquiler de Camiones Grúa" loading="lazy" onerror="this.style.display='none'">
+            <div class="service-number">01</div>
+          </div>
+          <div class="service-content">
+            <div class="service-icon">🚛</div>
+            <h3 class="service-title">Alquiler de Camiones Grúa</h3>
+            <p class="service-description">
+              Flota moderna de camiones grúa con brazo articulado y telescópico 
+              para maniobras de carga y descarga de hasta 50 toneladas.
+            </p>
+            <ul class="service-features">
+              <li>Capacidad de 10 a 50 toneladas</li>
+              <li>Brazo articulado y telescópico</li>
+              <li>Operadores certificados</li>
+              <li>Disponibilidad inmediata</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=51933667414&text=Hola%20ML%20RENTAL%2C%20me%20interesa%20el%20servicio%20de%20*Alquiler%20de%20Camiones%20Gr%C3%BAa*.%20Por%20favor%20brindarme%20informaci%C3%B3n%20sobre%3A%0A-%20Disponibilidad%0A-%20Precios%0A-%20Condiciones%20de%20alquiler%0A%0A%C2%A1Gracias%21" class="btn btn-primary" target="_blank" rel="nofollow">
+              Consultar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://picsum.photos/seed/truck2/800/600" alt="Transporte de Carga Pesada" loading="lazy" onerror="this.style.display='none'">
+            <div class="service-number">02</div>
+          </div>
+          <div class="service-content">
+            <div class="service-icon">📦</div>
+            <h3 class="service-title">Transporte de Carga Pesada</h3>
+            <p class="service-description">
+              Transporte especializado de carga sobredimensionada a nivel nacional. 
+              Logística completa para proyectos de gran envergadura.
+            </p>
+            <ul class="service-features">
+              <li>Carga sobredimensionada</li>
+              <li>Cobertura nacional</li>
+              <li>Permisos especiales</li>
+              <li>Seguro de carga incluido</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=51933667414&text=Hola%20ML%20RENTAL%2C%20me%20interesa%20el%20servicio%20de%20*Transporte%20de%20Carga%20Pesada*.%20Por%20favor%20brindarme%20informaci%C3%B3n%20sobre%3A%0A-%20Rutas%20disponibles%0A-%20Capacidad%20de%20carga%0A-%20Cotizaci%C3%B3n%20por%20viaje%0A%0A%C2%A1Gracias%21" class="btn btn-primary" target="_blank" rel="nofollow">
+              Consultar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://picsum.photos/seed/construction3/800/600" alt="Alquiler de Grúas Móviles" loading="lazy" onerror="this.style.display='none'">
+            <div class="service-number">03</div>
+          </div>
+          <div class="service-content">
+            <div class="service-icon">🏗️</div>
+            <h3 class="service-title">Alquiler de Grúas Móviles</h3>
+            <p class="service-description">
+              Grúas autopropulsadas de 10 a 350 toneladas para todo tipo de 
+              levantamiento en minería, construcción e industria.
+            </p>
+            <ul class="service-features">
+              <li>Capacidad de 10 a 350 Ton</li>
+              <li>Grúas todo terreno</li>
+              <li>Certificación anual</li>
+              <li>Mantenimiento preventivo</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=51933667414&text=Hola%20ML%20RENTAL%2C%20me%20interesa%20el%20servicio%20de%20*Alquiler%20de%20Gr%C3%BAas%20M%C3%B3viles*.%20Por%20favor%20brindarme%20informaci%C3%B3n%20sobre%3A%0A-%20Capacidades%20disponibles%0A-%20Precios%20por%20d%C3%ADa%2Fmes%0A-%20Requisitos%20de%20alquiler%0A%0A%C2%A1Gracias%21" class="btn btn-primary" target="_blank" rel="nofollow">
+              Consultar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Servicio 4 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://picsum.photos/seed/lift4/800/600" alt="Alquiler de Manlift" loading="lazy" onerror="this.style.display='none'">
+            <div class="service-number">04</div>
+          </div>
+          <div class="service-content">
+            <div class="service-icon">⬆️</div>
+            <h3 class="service-title">Alquiler de Manlift</h3>
+            <p class="service-description">
+              Plataformas elevadoras de brazo articulado, telescópico y 
+              tijera para trabajos en altura hasta 45 metros.
+            </p>
+            <ul class="service-features">
+              <li>Altura de 15 a 45 metros</li>
+              <li>Brazo articulado/telescópico</li>
+              <li>Plataformas tijera</li>
+              <li>Certificación de seguridad</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=51933667414&text=Hola%20ML%20RENTAL%2C%20me%20interesa%20el%20servicio%20de%20*Alquiler%20de%20Manlift*.%20Por%20favor%20brindarme%20informaci%C3%B3n%20sobre%3A%0A-%20Alturas%20disponibles%0A-%20Tipos%20de%20plataformas%0A-%20Precios%20y%20condiciones%0A%0A%C2%A1Gracias%21" class="btn btn-primary" target="_blank" rel="nofollow">
+              Consultar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Servicio 5 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://picsum.photos/seed/forklift5/800/600" alt="Alquiler de Montacargas" loading="lazy" onerror="this.style.display='none'">
+            <div class="service-number">05</div>
+          </div>
+          <div class="service-content">
+            <div class="service-icon">🚜</div>
+            <h3 class="service-title">Montacargas y Telehandler</h3>
+            <p class="service-description">
+              Equipos de manipulación de carga de 2 a 16 toneladas. 
+              Telehandlers rígidos y rotativos para todo terreno.
+            </p>
+            <ul class="service-features">
+              <li>Capacidad de 2 a 16 Ton</li>
+              <li>Telehandler rotativo</li>
+              <li>Para interior y exterior</li>
+              <li>Accesorios especializados</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=51933667414&text=Hola%20ML%20RENTAL%2C%20me%20interesa%20el%20servicio%20de%20*Montacargas%20y%20Telehandler*.%20Por%20favor%20brindarme%20informaci%C3%B3n%20sobre%3A%0A-%20Capacidades%20disponibles%0A-%20Tipos%20de%20equipos%0A-%20Precios%20de%20alquiler%0A%0A%C2%A1Gracias%21" class="btn btn-primary" target="_blank" rel="nofollow">
+              Consultar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Servicio 6 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://picsum.photos/seed/maintenance6/800/600" alt="Mantenimiento de Maquinaria" loading="lazy" onerror="this.style.display='none'">
+            <div class="service-number">06</div>
+          </div>
+          <div class="service-content">
+            <div class="service-icon">🔧</div>
+            <h3 class="service-title">Mantenimiento de Maquinaria</h3>
+            <p class="service-description">
+              Servicio técnico especializado para maquinaria pesada. 
+              Mantenimiento preventivo, correctivo y overhaul general.
+            </p>
+            <ul class="service-features">
+              <li>Mantenimiento preventivo</li>
+              <li>Reparaciones correctivas</li>
+              <li>Overhaul de motores</li>
+              <li>Diagnóstico computarizado</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=51933667414&text=Hola%20ML%20RENTAL%2C%20me%20interesa%20el%20servicio%20de%20*Mantenimiento%20de%20Maquinaria*.%20Por%20favor%20brindarme%20informaci%C3%B3n%20sobre%3A%0A-%20Tipos%20de%20mantenimiento%0A-%20Equipos%20que%20atienden%0A-%20Cotizaci%C3%B3n%20del%20servicio%0A%0A%C2%A1Gracias%21" class="btn btn-primary" target="_blank" rel="nofollow">
+              Consultar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flota -->
+  <section class="section fleet-section" id="flota">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nuestra Flota</span>
+        <h2 class="section-title">Equipos de <span>Alta Gama</span></h2>
+        <p class="section-subtitle">
+          Contamos con más de 60 equipos modernos y certificados para cubrir 
+          todas las necesidades de tu proyecto.
+        </p>
+      </div>
+      
+      <div class="fleet-grid">
+        <div class="fleet-card">
+          <div class="fleet-icon">🏗️</div>
+          <h3 class="fleet-name">Grúas Móviles</h3>
+          <p class="fleet-specs"><strong>10 - 350 Ton</strong></p>
+          <p class="fleet-specs">Todo terreno</p>
+        </div>
+        <div class="fleet-card">
+          <div class="fleet-icon">🚛</div>
+          <h3 class="fleet-name">Camiones Grúa</h3>
+          <p class="fleet-specs"><strong>10 - 50 Ton</strong></p>
+          <p class="fleet-specs">Articulado/Telescópico</p>
+        </div>
+        <div class="fleet-card">
+          <div class="fleet-icon">⬆️</div>
+          <h3 class="fleet-name">Manlift</h3>
+          <p class="fleet-specs"><strong>15 - 45m</strong></p>
+          <p class="fleet-specs">Articulado/Tijera</p>
+        </div>
+        <div class="fleet-card">
+          <div class="fleet-icon">🚜</div>
+          <h3 class="fleet-name">Telehandler</h3>
+          <p class="fleet-specs"><strong>2 - 16 Ton</strong></p>
+          <p class="fleet-specs">Rígido/Rotativo</p>
+        </div>
+        <div class="fleet-card">
+          <div class="fleet-icon">📦</div>
+          <h3 class="fleet-name">Cama Baja</h3>
+          <p class="fleet-specs"><strong>40 - 80 Ton</strong></p>
+          <p class="fleet-specs">Carga especial</p>
+        </div>
+        <div class="fleet-card">
+          <div class="fleet-icon">⚡</div>
+          <h3 class="fleet-name">Grupos Electrógenos</h3>
+          <p class="fleet-specs"><strong>50 - 500 KVA</strong></p>
+          <p class="fleet-specs">Diésel/Silencioso</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sectores -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Sectores que Atendemos</span>
+        <h2 class="section-title">Experiencia en Múltiples <span>Industrias</span></h2>
+        <p class="section-subtitle">
+          Brindamos servicios especializados para los sectores más exigentes 
+          del país, con protocolos de seguridad certificados.
+        </p>
+      </div>
+      
+      <div class="sectors-grid">
+        <div class="sector-card">
+          <img src="https://picsum.photos/seed/mining1/600/600" alt="Minería" class="sector-image" loading="lazy" onerror="this.style.display='none'">
+          <div class="sector-overlay">
+            <div class="sector-icon">⛏️</div>
+            <h3 class="sector-title">Minería</h3>
+            <p class="sector-description">Servicios para minería a tajo abierto y subterránea</p>
+          </div>
+        </div>
+        <div class="sector-card">
+          <img src="https://picsum.photos/seed/building2/600/600" alt="Construcción" class="sector-image" loading="lazy" onerror="this.style.display='none'">
+          <div class="sector-overlay">
+            <div class="sector-icon">🏗️</div>
+            <h3 class="sector-title">Construcción</h3>
+            <p class="sector-description">Edificaciones, puentes e infraestructura vial</p>
+          </div>
+        </div>
+        <div class="sector-card">
+          <img src="https://picsum.photos/seed/energy3/600/600" alt="Energía" class="sector-image" loading="lazy" onerror="this.style.display='none'">
+          <div class="sector-overlay">
+            <div class="sector-icon">⚡</div>
+            <h3 class="sector-title">Energía</h3>
+            <p class="sector-description">Proyectos eléctricos, hidroeléctricas y renovables</p>
+          </div>
+        </div>
+        <div class="sector-card">
+          <img src="https://picsum.photos/seed/oil4/600/600" alt="Gas y Petróleo" class="sector-image" loading="lazy" onerror="this.style.display='none'">
+          <div class="sector-overlay">
+            <div class="sector-icon">🛢️</div>
+            <h3 class="sector-title">Gas y Petróleo</h3>
+            <p class="sector-description">Exploración, refinamiento y distribución</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por Qué Elegirnos -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">¿Por Qué ML RENTAL?</span>
+        <h2 class="section-title section-title-white">La Elección de las <span style="color: var(--primary);">Grandes Empresas</span></h2>
+        <p class="section-subtitle" style="color: var(--gray-400);">
+          Más de 300 proyectos exitosos nos respaldan como socios estratégicos 
+          para operaciones de gran envergadura.
+        </p>
+      </div>
+      
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon">🎯</div>
+          <h3 class="why-title">Servicio Integral</h3>
+          <p class="why-description">
+            Resolvemos el "todo": alquiler, transporte, instalación y mantenimiento 
+            en un solo proveedor, simplificando tu logística.
+          </p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">✨</div>
+          <h3 class="why-title">Maquinaria Moderna</h3>
+          <p class="why-description">
+            Equipos de última generación con los más altos estándares de seguridad, 
+            certificación anual y mantenimiento preventivo.
+          </p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">⏱️</div>
+          <h3 class="why-title">Alta Disponibilidad</h3>
+          <p class="why-description">
+            Flota propia de más de 60 equipos que garantiza disponibilidad inmediata 
+            y respuesta rápida a tus requerimientos.
+          </p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🤝</div>
+          <h3 class="why-title">Soporte 24/7</h3>
+          <p class="why-description">
+            Equipo técnico disponible las 24 horas para emergencias y soporte 
+            post-venta en todo el territorio nacional.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section class="section" id="proyectos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portafolio</span>
+        <h2 class="section-title">Proyectos <span>Destacados</span></h2>
+        <p class="section-subtitle">
+          Hemos participado en los proyectos de infraestructura más importantes 
+          del país, brindando soluciones confiables y oportunas.
+        </p>
+      </div>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="https://picsum.photos/seed/metro1/800/600" alt="Línea 2 Metro de Lima" class="project-image" loading="lazy" onerror="this.style.display='none'">
+          <div class="project-overlay">
+            <span class="project-category">Infraestructura</span>
+            <h3 class="project-title">Consorcio Constructor Línea 2</h3>
+            <a href="https://api.whatsapp.com/send?phone=51933667414&text=Hola%20ML%20RENTAL%2C%20me%20interesa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%3A%20*Consorcio%20Constructor%20L%C3%ADnea%202*.%20Por%20favor%20brindarme%20detalles%20del%20servicio%20brindado." class="btn btn-primary" target="_blank" rel="nofollow">Consultar</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://picsum.photos/seed/mine2/800/600" alt="Mina Toromocho" class="project-image" loading="lazy" onerror="this.style.display='none'">
+          <div class="project-overlay">
+            <span class="project-category">Minería</span>
+            <h3 class="project-title">Montacargas 16 TN - Mina Toromocho</h3>
+            <a href="https://api.whatsapp.com/send?phone=51933667414&text=Hola%20ML%20RENTAL%2C%20me%20interesa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%3A%20*Mina%20Toromocho*.%20Por%20favor%20brindarme%20detalles%20del%20servicio%20brindado." class="btn btn-primary" target="_blank" rel="nofollow">Consultar</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://picsum.photos/seed/plant3/800/600" alt="Planta Austral Chancay" class="project-image" loading="lazy" onerror="this.style.display='none'">
+          <div class="project-overlay">
+            <span class="project-category">Energía</span>
+            <h3 class="project-title">Planta Austral - Chancay</h3>
+            <a href="https://api.whatsapp.com/send?phone=51933667414&text=Hola%20ML%20RENTAL%2C%20me%20interesa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%3A%20*Planta%20Austral%20-%20Chancay*.%20Por%20favor%20brindarme%20detalles%20del%20servicio%20brindado." class="btn btn-primary" target="_blank" rel="nofollow">Consultar</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="https://picsum.photos/seed/bridge4/800/600" alt="Puerto Maldonado" class="project-image" loading="lazy" onerror="this.style.display='none'">
+          <div class="project-overlay">
+            <span class="project-category">Infraestructura</span>
+            <h3 class="project-title">Puentes - Puerto Maldonado</h3>
+            <a href="https://api.whatsapp.com/send?phone=51933667414&text=Hola%20ML%20RENTAL%2C%20me%20interesa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%3A%20*Puentes%20-%20Puerto%20Maldonado*.%20Por%20favor%20brindarme%20detalles%20del%20servicio%20brindado." class="btn btn-primary" target="_blank" rel="nofollow">Consultar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clientes -->
+  <section class="clients-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Clientes</span>
+        <h2 class="section-title">Empresas que <span>Confían</span> en Nosotros</h2>
+      </div>
+      <div class="clients-grid">
+        <div style="font-family:'Barlow',sans-serif;font-weight:800;font-size:12px;color:#8c8c8c;text-align:center;padding:8px;">ACEROS<br>AREQUIPA</div>
+        <div style="font-family:'Barlow',sans-serif;font-weight:800;font-size:12px;color:#8c8c8c;text-align:center;padding:8px;">GRÚAS<br>SA</div>
+        <div style="font-family:'Barlow',sans-serif;font-weight:800;font-size:12px;color:#8c8c8c;text-align:center;padding:8px;">KOMATSU</div>
+        <div style="font-family:'Barlow',sans-serif;font-weight:800;font-size:12px;color:#8c8c8c;text-align:center;padding:8px;">METRO<br>LIMA</div>
+        <div style="font-family:'Barlow',sans-serif;font-weight:800;font-size:12px;color:#8c8c8c;text-align:center;padding:8px;">UNICON</div>
+        <div style="font-family:'Barlow',sans-serif;font-weight:800;font-size:12px;color:#8c8c8c;text-align:center;padding:8px;">LOS<br>PORTALES</div>
+        <div style="font-family:'Barlow',sans-serif;font-weight:800;font-size:12px;color:#8c8c8c;text-align:center;padding:8px;">OHLA</div>
+        <div style="font-family:'Barlow',sans-serif;font-weight:800;font-size:12px;color:#8c8c8c;text-align:center;padding:8px;">SACYR</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-content">
+        <div class="cta-text">
+          <h2>¿Listo para Iniciar tu Proyecto?</h2>
+          <p>Cotiza ahora y recibe una propuesta personalizada en menos de 24 horas</p>
+        </div>
+        <div class="cta-buttons">
+          <a href="https://api.whatsapp.com/send?phone=51933667414&text=Hola%20ML%20RENTAL%2C%20estoy%20listo%20para%20iniciar%20mi%20proyecto.%20Necesito%20una%20cotizaci%C3%B3n%20personalizada.%20Por%20favor%20cont%C3%A1ctenme." class="btn btn-whatsapp" target="_blank" rel="nofollow">
+            <span>💬</span> Contactar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contacto">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">⚙</div>
+            <span>ML RENTAL</span>
+          </a>
+          <p>
+            Empresa peruana especializada en alquiler de grúas, maquinaria pesada 
+            y transporte de carga sobredimensionada. Más de 7 años brindando 
+            soluciones integrales para minería, construcción e industria.
+          </p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" rel="nofollow" aria-label="Facebook">📘</a>
+            <a href="https://linkedin.com" target="_blank" rel="nofollow" aria-label="LinkedIn">💼</a>
+            <a href="https://instagram.com" target="_blank" rel="nofollow" aria-label="Instagram">📷</a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-title">Servicios</h4>
+          <ul class="footer-links">
+            <li><a href="#servicios">Alquiler de Grúas</a></li>
+            <li><a href="#servicios">Camiones Grúa</a></li>
+            <li><a href="#servicios">Transporte de Carga</a></li>
+            <li><a href="#servicios">Manlift</a></li>
+            <li><a href="#servicios">Montacargas</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-title">Empresa</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-title">Contacto</h4>
+          <ul class="footer-links footer-contact">
+            <li>
+              <span>📍</span>
+              Calle Pedro Garezón 2062, Urba Antáres – Oficina 201, San Martín de Porres, Lima
+            </li>
+            <li>
+              <span>📱</span>
+              <a href="https://api.whatsapp.com/send?phone=51933667414" target="_blank" rel="nofollow">+51 933 667 414</a>
+            </li>
+            <li>
+              <span>✉️</span>
+              <a href="mailto:contacto@mlrental.com">contacto@mlrental.com</a>
+            </li>
+            <li>
+              <span>🕐</span>
+              Lunes a Sábado: 8:00 AM - 6:00 PM
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-content">
+          <p>© 2024 ML RENTAL. Todos los derechos reservados.</p>
+          <p>
+            <a href="#" style="color: var(--gray-400);">
+              📋 Libro de Reclamaciones
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="fastpagepro-credits">
+      <p>
+        Creado y desarrollado por 
+        <a href="https://fastpagepro.com" target="_blank" rel="nofollow">FastPagePro</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flotante -->
+  <div class="whatsapp-float">
+    <a href="https://api.whatsapp.com/send?phone=51933667414&text=Hola%20ML%20RENTAL%2C%20deseo%20cotizar%20un%20servicio.%20Por%20favor%20brindarme%20informaci%C3%B3n." target="_blank" rel="nofollow" aria-label="Chat WhatsApp">
+      <!-- Ícono WhatsApp SVG -->
+      <svg viewBox="0 0 24 24" fill="currentColor" class="whatsapp-icon">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+      <!-- Texto (solo desktop) -->
+      <span class="whatsapp-text">¡Cotiza Ahora!</span>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-menu a');
+
+    mobileToggle.addEventListener('click', () => {
+      mobileToggle.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close mobile menu on link click
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Header scroll effect
+    let lastScroll = 0;
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        header.style.background = 'rgba(13, 13, 13, 0.98)';
+      } else {
+        header.style.background = 'rgba(13, 13, 13, 0.95)';
+      }
+      
+      lastScroll = currentScroll;
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          const headerHeight = header.offsetHeight;
+          const targetPosition = target.offsetTop - headerHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Close mobile menu on outside click
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !mobileToggle.contains(e.target)) { 
+        mobileToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Animations on Scroll
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    const animateOnScrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    animateElements.forEach(el => animateOnScrollObserver.observe(el));
+
+    // Scroll to Top
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    window.addEventListener('scroll', () => {
+      if (scrollToTopBtn && window.pageYOffset > 500) {
+        scrollToTopBtn.classList.add('visible');
+      } else if (scrollToTopBtn) {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    });
+    if (scrollToTopBtn) {
+      scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Form Validation
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        let isValid = true;
+        ['nombre', 'email', 'telefono', 'mensaje'].forEach(field => {
+          const input = document.getElementById(field);
+          const formGroup = input?.closest('.form-group');
+          if (input && formGroup) {
+            if (!input.value.trim()) {
+              formGroup.classList.add('error');
+              isValid = false;
+            } else {
+              formGroup.classList.remove('error');
+              if (field === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
+                formGroup.classList.add('error');
+                isValid = false;
+              }
+            }
+          }
+        });
+        if (isValid && formSuccess) {
+          formSuccess.classList.add('show');
+          contactForm.reset();
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'form_submit', { event_category: 'conversion', event_label: 'contact_form' });
+          }
+          setTimeout(() => formSuccess.classList.remove('show'), 5000);
+        }
+      });
+      document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
+        input.addEventListener('input', function() {
+          this.closest('.form-group').classList.remove('error');
+        });
+      });
+    }
+
+    // Register Service Worker (PWA)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('SW registered:', reg.scope))
+          .catch(err => console.log('SW registration failed:', err));
+      });
+    }
+  </script>
+</body>
+</html>
