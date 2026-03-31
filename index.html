@@ -2639,12 +2639,87 @@
 
     // Close mobile menu on outside click
     document.addEventListener('click', (e) => {
-      if (!mobileMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+      if (!mobileMenu.contains(e.target) && !mobileToggle.contains(e.target)) { 
         mobileToggle.classList.remove('active');
         mobileMenu.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       }
     });
+
+    // Animations on Scroll
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    const animateOnScrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    animateElements.forEach(el => animateOnScrollObserver.observe(el));
+
+    // Scroll to Top
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    window.addEventListener('scroll', () => {
+      if (scrollToTopBtn && window.pageYOffset > 500) {
+        scrollToTopBtn.classList.add('visible');
+      } else if (scrollToTopBtn) {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    });
+    if (scrollToTopBtn) {
+      scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Form Validation
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        let isValid = true;
+        ['nombre', 'email', 'telefono', 'mensaje'].forEach(field => {
+          const input = document.getElementById(field);
+          const formGroup = input?.closest('.form-group');
+          if (input && formGroup) {
+            if (!input.value.trim()) {
+              formGroup.classList.add('error');
+              isValid = false;
+            } else {
+              formGroup.classList.remove('error');
+              if (field === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
+                formGroup.classList.add('error');
+                isValid = false;
+              }
+            }
+          }
+        });
+        if (isValid && formSuccess) {
+          formSuccess.classList.add('show');
+          contactForm.reset();
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'form_submit', { event_category: 'conversion', event_label: 'contact_form' });
+          }
+          setTimeout(() => formSuccess.classList.remove('show'), 5000);
+        }
+      });
+      document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
+        input.addEventListener('input', function() {
+          this.closest('.form-group').classList.remove('error');
+        });
+      });
+    }
+
+    // Register Service Worker (PWA)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('SW registered:', reg.scope))
+          .catch(err => console.log('SW registration failed:', err));
+      });
+    }
   </script>
 </body>
 </html>
